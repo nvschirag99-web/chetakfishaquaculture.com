@@ -241,13 +241,21 @@
       <div class="contact-left" aria-labelledby="contact-form-title">
         <h2 id="contact-form-title">Contact Us</h2>
 
-        <!-- Netlify form: keep markup for Netlify to parse at build time -->
-        <form id="contactForm"
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              onsubmit="submitNetlifyForm(event)">
+        <form
+  action="https://formspree.io/f/xjkjbnqq"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
           <!-- required for Netlify -->
           <input type="hidden" name="form-name" value="contact" />
